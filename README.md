@@ -12,7 +12,7 @@ $ pip install tensorflow==2.0.0
 $ pip install keras==2.1.5  
 $ pip install pillow==7.0.0
 
-Make sure the Tensorflow Version 2.0.0 is installed. Other Versions cause different errors.  
+Make sure the Tensorflow version 2.0.0 is installed. Other versions cause different errors.  
 New TF versions could be more stabe in the future (Today: 29.01.2020).  
 
 # Usability
@@ -27,7 +27,7 @@ $ cd "cloned directory"
 $ python manage.py runserver  
 Settings for postman:  
 [Postman](postman.jpg)  
-Recreate Postman in application.  
+Recreate Postman post request in your application.  
 Response:  
 "predicted" - label from "labels" with highest probability  
 "defect" - first entry in "labels" and its probability  
