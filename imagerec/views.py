@@ -24,8 +24,9 @@ class FileUploadView(APIView):
             values["file"] = file_serializer.data["file"]
 
             # delete previously uploaded file
-            file = File.objects.get(pk=file_serializer.data["id"] - 1 )
-            file.delete()
+            if file_serializer.data["id"] > 0:
+                file = File.objects.get(pk=file_serializer.data["id"] - 1 )
+                file.delete()
 
             return Response(values, status=status.HTTP_201_CREATED)
         else:
